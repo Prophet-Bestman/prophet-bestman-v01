@@ -74,3 +74,15 @@ body {
   border: 7.31872px solid #fbfff2;
   border-radius: 39.4333px;
 }
+
+.clip-bottom {
+  clip-path: polygon(93% 57%, 100% 0, 100% 100%, 0 100%);
+  background-color: #4831d4;
+  height: 400px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: -1px;
+  /* border-bottom: #4831d4 solid 3px; */
+  z-index: 5;
+}

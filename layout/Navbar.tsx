@@ -31,9 +31,9 @@ const Navbar = () => {
             >
               {link.name}
               {active == link.name && (
-                <div className="mt-2">
+                <span className="mt-2">
                   <NavIcon />
-                </div>
+                </span>
               )}
             </p>
           </Link>
