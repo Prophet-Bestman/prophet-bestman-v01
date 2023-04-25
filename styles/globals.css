@@ -13,6 +13,10 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --primary: #4831d4;
+    --darkShade: #001037;
+    --lemon: #ccf381;
+    --darkShade: #offWhite;
   }
 }
 
@@ -26,12 +30,14 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+/* ===== HOME PAGE - HERO SECTION ===== */
+
 .blur-ellipse {
   position: absolute;
   width: 460px;
   height: 322.39px;
   bottom: 0;
-  background: #ccf381;
+  background: var(--lemon);
   opacity: 0.3;
   filter: blur(35px);
   transform: matrix(1, 0, 0, -1, 0, 0);
@@ -44,7 +50,7 @@ body {
   position: absolute;
   width: 70%;
   height: 75%;
-  background: #ccf381;
+  background: var(--lemon);
   border: 7.31872px solid #fbfff2;
   border-radius: 39.4333px;
   transform: rotate(12.83deg);
@@ -55,7 +61,7 @@ body {
   position: absolute;
   width: 70%;
   height: 75%;
-  background: #ccf381;
+  background: var(--lemon);
   border: 7.31872px solid #fbfff2;
   border-radius: 39.4333px;
   transform: rotate(-11.3deg);
@@ -64,7 +70,7 @@ body {
 .hero-img {
   box-sizing: border-box;
   position: absolute;
-  z-index: 200;
+  z-index: 10;
   width: 70%;
   height: 75%;
   background: url(/img/Prophet-Bestman.png);
@@ -77,7 +83,7 @@ body {
 
 .clip-bottom {
   clip-path: polygon(93% 57%, 100% 0, 100% 100%, 0 100%);
-  background-color: #4831d4;
+  background-color: var(--primary);
   height: 400px;
   position: absolute;
   bottom: 0;
@@ -85,4 +91,22 @@ body {
   margin-bottom: -1px;
   /* border-bottom: #4831d4 solid 3px; */
   z-index: 5;
+}
+
+/* ===== PORTFOLIO PAGE ===== */
+
+.shape {
+  background-color: var(--lemon);
+  height: 869px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.left-shape {
+  clip-path: polygon(0 0, 0% 100%, 24% 75%);
+}
+.right-shape {
+  clip-path: polygon(100% 0, 90% 27%, 100% 40%);
+  top: -100px;
 }
