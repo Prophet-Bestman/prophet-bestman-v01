@@ -9,9 +9,9 @@ import React from "react";
 const Hero = () => {
   return (
     <div>
-      <div className="grid grid-cols-11 bg-primary h-[89vh] px-[90px] py-[50px] gap-[75px] items-center border-b-[28px] border-b-lemon ">
-        <div className="col-span-6 h-full text-offWhite flex flex-col justify-center ">
-          <h1 className="text-[50px] mb-[30px] ">
+      <div className="grid grid-cols-1 lg:grid-cols-11 bg-primary min-h-[89vh] px-6 sm:px-20 md:px-[90px] py-[50px] gap-[75px] items-center border-b-[28px] border-b-lemon ">
+        <div className="col-span-1 lg:col-span-6 h-full text-offWhite flex flex-col justify-center order-2 lg:order-1  ">
+          <h1 className="text-[40px] md:text-[50px] mb-[30px] ">
             Front-End{" "}
             <span className="font-bold">
               <span className="bg-lemon text-primary rounded-tl-[50px] rounded-br-[50px] py-3">
@@ -23,7 +23,7 @@ const Hero = () => {
 
           <h3 className="font-extrabold text-lg">Prophet Bestman</h3>
 
-          <p className="font-medium text-lg">
+          <p className="font-normal md:font-medium text-base md:text-lg">
             Some--kinda text that says something smart Some--kinda text that
             says something smart Some--kinda text that says something smart and
             some more stuffs for you
@@ -43,8 +43,8 @@ const Hero = () => {
             View Portfolio
           </button>
         </div>
-        <div className="col-span-5 h-[512px] relative">
-          <div className="w-[435px] h-full relative flex justify-center items-center">
+        <div className="col-span-1 lg:col-span-5 h-[450px] sm:h-[512px] relative order-1 lg:order-2">
+          <div className="w-full max-w-[435px] h-full relative flex justify-center items-center mx-auto ">
             <HeroImgTopLeftEdge />
             <HeroImgTopRightEdge />
             <HeroImgBottomLeftEdge />
@@ -54,7 +54,7 @@ const Hero = () => {
             <div className="hero-card-two"></div>
             <div className="hero-img"></div>
           </div>
-          <div className="blur-ellipse"></div>
+          <div className="blur-ellipse w-full max-w-[460px]"></div>
         </div>
       </div>
     </div>
