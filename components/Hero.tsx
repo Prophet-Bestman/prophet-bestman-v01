@@ -99,7 +99,8 @@ const Hero = () => {
               <motion.div
                 animate={{
                   scale: [1, 1.2, 1.2, 1, 1],
-                  rotate: [0, 0, 270, 270, 12],
+                  opacity: [1, 0.3, 0.5, 1, 1],
+                  rotate: [0, 12, 370, 270, 12],
                 }}
                 transition={{
                   duration: 2.5,
@@ -115,7 +116,8 @@ const Hero = () => {
               <motion.div
                 animate={{
                   scale: [1, 1.2, 1.2, 1, 1],
-                  rotate: [0, 0, -270, -270, -12],
+                  opacity: [1, 0.3, 0.5, 1, 1],
+                  rotate: [0, -12, -370, -270, -12],
                 }}
                 transition={{
                   duration: 2.5,
