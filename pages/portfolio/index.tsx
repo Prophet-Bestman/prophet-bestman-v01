@@ -5,9 +5,7 @@ import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 
 const Portfolio = () => {
-  const { setActiveNav, activeNav } = useNavContext();
-
-  console.log(activeNav);
+  const { setActiveNav } = useNavContext();
 
   useEffect(() => {
     setActiveNav(navStates.PORTFOLIO);

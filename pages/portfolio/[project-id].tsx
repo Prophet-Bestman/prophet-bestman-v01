@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import { navStates, useNavContext } from "@/contexts/NavContext";
 
 const SingleProject = () => {
+  const { setActiveNav } = useNavContext();
+
+  useEffect(() => {
+    setActiveNav(navStates.PORTFOLIO);
+  }, []);
   return (
     <div className="min-h-screen bg-primary relative py-10">
       {/* ===== SHAPES ====== */}
