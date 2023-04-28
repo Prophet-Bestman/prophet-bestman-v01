@@ -5,8 +5,11 @@ import {
   AiFillLinkedin,
   AiOutlineTwitter,
 } from "react-icons/ai";
-import { SendIcon } from "@/svgs";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+import { SendIcon } from "@/svgs";
+import { Typewriter } from "react-simple-typewriter";
 
 const socialMedia = [
   {
@@ -40,10 +43,18 @@ const Footer = () => {
             CONNECT WITH ME
           </h3>
 
-          <p className="text-base lg:text-[20px] max-w-[636px] opacity-70">
-            Something and other things joining together to develop the mimshack
-            vibes and anointingSomething and other things joining together to
-            develop the mimshack vibes and anointing
+          <p className="text-base lg:text-[20px] max-w-[636px] opacity-70 h-[100px]">
+            <Typewriter
+              words={[
+                "Something and other things joining together to develop the mimshackvibes and anointingSomething and other things joining together to develop the mimshack vibes and anointing",
+              ]}
+              cursor
+              cursorStyle="_"
+              typeSpeed={15}
+              deleteSpeed={5}
+              loop={100}
+              delaySpeed={7000}
+            />
           </p>
 
           <div className="relative w-full md:max-w-[500px] mt-[60px] ">
@@ -66,13 +77,27 @@ const Footer = () => {
 
             <div className="flex gap-2">
               {socialMedia.map((item, i) => (
-                <Link
-                  href={item.link}
+                <motion.div
                   key={i}
-                  className="w-12 md:w-[56px] h-12 md:h-[56px] rounded-full text-[#3E5EAB] cursor-pointer text-2xl md:text-3xl bg-offWhite flex justify-center items-center hover:scale-90 transition-all ease-in-out duration-300 hover:opacity-75 "
+                  whileInView={{
+                    y: [50, 0],
+                    opacity: [0, 1],
+                  }}
+                  transition={{
+                    delay: 0.2 + 0.1 * i,
+                    duration: 0.4,
+                    type: "spring",
+                    damping: 6,
+                    stiffness: 50,
+                  }}
                 >
-                  {item?.icon}
-                </Link>
+                  <Link
+                    href={item.link}
+                    className="w-12 md:w-[56px] h-12 md:h-[56px] rounded-full text-[#3E5EAB] cursor-pointer text-2xl md:text-3xl bg-offWhite flex justify-center items-center hover:scale-90 transition-all ease-in-out duration-300 hover:opacity-75 "
+                  >
+                    {item?.icon}
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </div>
