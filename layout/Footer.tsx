@@ -1,14 +1,11 @@
 import React from "react";
 import { IoLogoWhatsapp } from "react-icons/io";
-import {
-  AiFillInstagram,
-  AiFillLinkedin,
-  AiOutlineTwitter,
-} from "react-icons/ai";
-import Link from "next/link";
+import { SiHashnode } from "react-icons/si";
+import { AiFillLinkedin, AiOutlineTwitter } from "react-icons/ai";
+// import Link from "next/link";
 import { motion } from "framer-motion";
 
-import { SendIcon } from "@/svgs";
+// import { SendIcon } from "@/svgs";
 import { Typewriter } from "react-simple-typewriter";
 
 const socialMedia = [
@@ -21,8 +18,8 @@ const socialMedia = [
     link: "https://twitter.com/dProphetBestman",
   },
   {
-    icon: <AiFillInstagram />,
-    link: "https://hashnode.com/@ProphetBestman",
+    icon: <SiHashnode />,
+    link: "https://prophet-bestman.hashnode.dev/",
   },
   {
     icon: <IoLogoWhatsapp />,
@@ -56,28 +53,6 @@ const Footer = () => {
               delaySpeed={10000}
             />
           </p>
-
-          <div className="relative w-full md:max-w-[500px] mt-[60px] ">
-            <input
-              type="email"
-              className="bg-[#F3F3F3] w-full px-4 md:px-10 py-4  md:py-4 text-base md:text-lg text-[#000A21] rounded-[10px]  "
-              placeholder="Your Email"
-            ></input>
-            {/* <div className="absolute top-4 md:top-4] right-10 cursor-pointer ">
-              <SendIcon />
-            </div> */}
-          </div>
-
-          <div className="relative w-full md:max-w-[500px] mt-4 ">
-            <input
-              type="text"
-              className="bg-[#F3F3F3] w-full px-4 md:px-10 py-4  md:py-4 text-base md:text-lg text-[#000A21] rounded-[10px]  "
-              placeholder="Send a message"
-            ></input>
-            <div className="absolute top-4 md:top-4] right-10 cursor-pointer ">
-              <SendIcon />
-            </div>
-          </div>
         </div>
 
         <div className="col-span-1 flex justify-center md:justify-end">
