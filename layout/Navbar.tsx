@@ -38,7 +38,7 @@ const Navbar = () => {
   }
   return (
     <div
-      className={`h-[90px] px-8 sm:px-[90px] flex items-center bg-[#4831d4] z-30 fixed w-full top-0 ${
+      className={`h-[90px] px-8 sm:px-[90px] flex items-center bg-[#4831d4] z-40 fixed w-full top-0 ${
         makeSeeThrough ? "opacity-90" : ""
       }  `}
     >
