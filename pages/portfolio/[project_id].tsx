@@ -80,7 +80,7 @@ const SingleProject = () => {
               href={`${project.linkToProject}`}
               className="text-center font-bold text-lg mx-auto text-lemon"
               target="_blank"
-              // rel="noreferrer"
+              rel="noreferrer"
             >
               <div className="flex items-center gap-1 ">
                 <AiOutlineLink size="24px" />
