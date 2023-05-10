@@ -4,13 +4,42 @@ import { motion } from "framer-motion";
 
 const features = [
   {
-    name: "Hey",
+    title: "Development",
+    img: "/img/development.jpg",
+    content: ` I offer top-notch software development services where I leverage the
+        power of ReactJS, TypeScript, and cutting-edge technologies. With
+        expertise in converting designs into elegant code, seamlessly
+        integrating APIs, and ensuring smooth deployment, I create beautiful and
+        high-performing applications. From start to finish, I prioritize user
+        experience, performance, and efficiency. Trust me to bring your ideas to
+        life and deliver exceptional software solutions.`,
   },
   {
-    name: "Hi",
+    title: "Collaboration",
+    img: "/img/collaboration.jpg",
+    content: ` As a software developer, collaboration is at the core of my approach. I
+        thrive in team environments and believe in the power of collective
+        intelligence. I actively engage with my team members, fostering open
+        communication and encouraging the sharing of ideas and perspectives. I
+        value the diverse skill sets and expertise within the team, and I'm
+        always ready to collaborate, brainstorm, and problem-solve together. By
+        working collaboratively, we can leverage each other's strengths, tackle
+        challenges more effectively, and ultimately deliver exceptional software
+        solutions that exceed expectations.`,
   },
   {
-    name: "Hello",
+    title: "Client Satisfaction",
+    img: "/img/client-satisfaction.jpg",
+    content: ` Understanding customer needs and translating their ideas into satisfying
+        software is my utmost priority. I take the time to actively listen and
+        engage with clients, ensuring I grasp the core of their vision. By
+        asking the right questions and conducting thorough discussions, I gain a
+        deep understanding of their requirements. I then utilize my technical
+        expertise to transform their ideas into practical, reliable, and
+        user-friendly software solutions. Constant communication and regular
+        updates keep clients involved and informed throughout the development
+        process, ensuring their satisfaction and the successful realization of
+        their vision.`,
   },
 ];
 
@@ -32,11 +61,11 @@ const FeaturesSection = () => {
 
   console.log("Screen Size:", screenSize);
   return (
-    <div className="bg-darkShade py-[96px] relative grid gap-y-32 lg:gap-y-20 overflow-hidden ">
+    <div className="bg-darkShade py-[96px] relative grid gap-y-32 lg:gap-y-44 overflow-hidden ">
       {features.map((feature, i) => (
         <div
           className="flex flex-col lg:grid grid-cols-12 gap-12 lg:gap-9 relative z-10 px-8 md:px-20 xl:px-[104px] "
-          key={`${feature.name}-${i}`}
+          key={`${feature.title}-${i}`}
         >
           {/* ====== BACKGROUND SHAPE START ====== */}
           <div
@@ -60,16 +89,8 @@ const FeaturesSection = () => {
               i === 1 ? "order-1 lg:order-2 " : ""
             }`}
           >
-            {/* <motion.div
-              initial={{ x: i === 1 ? 200 : -200, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-            >
-              
-            </motion.div> */}
-
             <img
-              src="/img/feature.jpg"
+              src={feature?.img}
               className={`w-full h-full object-cover rounded-lg sm:max-w-[420px] border-8 border-offWhite  `}
             />
           </div>
@@ -79,10 +100,6 @@ const FeaturesSection = () => {
             }`}
           >
             <motion.div
-              // whileInView={{
-              //   x: i === 1 ? [-600, 0] : [600, 0],
-              //   opacity: [0, 1],
-              // }}
               transition={{
                 delay: 0.2,
                 duration: 1,
@@ -102,18 +119,9 @@ const FeaturesSection = () => {
                     }
               }
             >
-              <h3 className="text-2xl font-extrabold mb-8">Development</h3>
+              <h3 className="text-2xl font-extrabold mb-8">{feature.title}</h3>
 
-              <p className="text-lg font-medium mb-2">
-                Some--kinda text that says something smart Some--kinda text that
-                says something smart Some--kinda text that says something smart
-                and some more stuffs for you
-              </p>
-              <p className="text-lg font-medium mb-2">
-                Some--kinda text that says something smart Some--kinda text that
-                says something smart Some--kinda text that says something smart
-                and some more stuffs for you
-              </p>
+              <p className="text-lg font-medium mb-2">{feature.content}</p>
             </motion.div>
           </div>
         </div>
