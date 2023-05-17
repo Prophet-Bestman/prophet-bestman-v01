@@ -23,7 +23,7 @@ const SingleProject = () => {
   console.log(project);
 
   return (
-    <div className="min-h-screen bg-primary relative py-10">
+    <div className="min-h-screen bg-primary relative py-10 overflow-x-hidden">
       {/* ===== SHAPES ====== */}
       <div className="shape left-shape"></div>
       <div className="shape right-shape"></div>
@@ -33,7 +33,7 @@ const SingleProject = () => {
       ) : (
         typeof project !== "undefined" && (
           <main className="px-6 sm:px-8 md:px-[72px] mb-28 grid">
-            <h2 className="py-10 sm:py-20 text-offWhite font-bold text-center text-[32px]">
+            <h2 className="py-10 sm:py-20 text-offWhite font-bold text-center text-2xl sm:text-[32px]">
               {project.projectName}
             </h2>
 
@@ -67,7 +67,7 @@ const SingleProject = () => {
               <div className="bg-[#323232] rounded-[20px] opacity-60 absolute top-0 left-0 w-full h-full z-20 "></div>
             </motion.div>
 
-            <div className="flex justify-center gap-3 font-bold text-lg my-7 text-offWhite">
+            <div className="flex justify-center gap-1 sm:gap-3 font-bold text-sm sm:text-base md:text-lg my-7 text-offWhite relative z-10 drop-shadow-lg">
               {project.technologies?.map((tech, i) => (
                 <div className="flex gap-3" key={i}>
                   <p>{tech} </p>
@@ -78,7 +78,7 @@ const SingleProject = () => {
 
             <a
               href={`${project.linkToProject}`}
-              className="text-center font-bold text-lg mx-auto text-lemon"
+              className="text-center font-bold text-lg mx-auto text-offWhite drop-shadow-lg underline"
               target="_blank"
               rel="noreferrer"
             >
@@ -101,7 +101,7 @@ const SingleProject = () => {
                   damping: 6,
                   stiffness: 50,
                 }}
-                className=" text-lemon font-bold text-center text-[32px] mb-8"
+                className=" text-lemon font-bold text-center text-xl md:text-[32px] mb-3 sm:mb-6 md:mb-8"
               >
                 Project Details
               </motion.h2>
@@ -118,7 +118,7 @@ const SingleProject = () => {
                   damping: 6,
                   stiffness: 50,
                 }}
-                className="grid text-base md:text-lg gap-[72px] text-center max-w-5xl mx-auto"
+                className="grid text-base md:text-lg gap-[72px] text-center max-w-3xl mx-auto"
               >
                 <ReactMarkdown className="whitespace-pre-wrap">
                   {project.projectDetails.markdown}

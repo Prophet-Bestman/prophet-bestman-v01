@@ -16,6 +16,11 @@ const links = [
     name: "Portfolio",
     link: "/portfolio",
   },
+  {
+    name: "Blog",
+    link: "https://prophet-bestman.hashnode.dev/",
+    newTab: true,
+  },
 ];
 
 const Navbar = () => {
@@ -58,7 +63,11 @@ const Navbar = () => {
         className="hidden md:flex gap-[56px] text-2xl text-offWhite font-semibold mx-auto"
       >
         {links.map((link) => (
-          <Link key={link.name} href={link.link}>
+          <Link
+            target={link.newTab ? "_blank" : ""}
+            key={link.name}
+            href={link.link}
+          >
             <p
               className={`${
                 activeNav === link.name ? "opacity-100" : "opacity-50"
@@ -110,7 +119,12 @@ const Navbar = () => {
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.3, duration: 0.5 }}
                 >
-                  <Link href={link.link} onClick={toggleDrawer} key={link.name}>
+                  <Link
+                    target={link.newTab ? "_blank" : ""}
+                    href={link.link}
+                    onClick={toggleDrawer}
+                    key={link.name}
+                  >
                     <p
                       className={`${
                         activeNav === link.name ? "opacity-100" : "opacity-50"
