@@ -59,7 +59,6 @@ const FeaturesSection = () => {
     }, 0);
   }, []);
 
-  console.log("Screen Size:", screenSize);
   return (
     <div className="bg-darkShade py-[96px] relative grid gap-y-32 lg:gap-y-44 overflow-hidden ">
       {features.map((feature, i) => (

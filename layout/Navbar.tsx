@@ -21,6 +21,11 @@ const links = [
     link: "https://prophet-bestman.hashnode.dev/",
     newTab: true,
   },
+  {
+    name: "Resume",
+    link: "https://docs.google.com/document/d/1hbek64UpF5PFlzVfoG0HNFi7RhchxYLdk-GHRtUdpco/edit?usp=sharing",
+    newTab: true,
+  },
 ];
 
 const Navbar = () => {

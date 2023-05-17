@@ -20,8 +20,6 @@ const SingleProject = () => {
     router.query.project_id as string
   );
 
-  console.log(project);
-
   return (
     <div className="min-h-screen bg-primary relative py-10 overflow-x-hidden">
       {/* ===== SHAPES ====== */}
