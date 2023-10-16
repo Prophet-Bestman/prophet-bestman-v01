@@ -118,15 +118,17 @@ const FeaturesSection = () => {
                     }
               }
             >
-              <h3 className="text-2xl font-extrabold mb-8">{feature.title}</h3>
+              <h3 className="mb-8 text-2xl font-extrabold">{feature.title}</h3>
 
-              <p className="text-lg font-medium mb-2">{feature.content}</p>
+              <p className="mb-2 text-lg font-medium text-white/50">
+                {feature.content}
+              </p>
             </motion.div>
           </div>
         </div>
       ))}
 
-      <div className="clip-bottom w-full"></div>
+      <div className="w-full clip-bottom"></div>
     </div>
   );
 };

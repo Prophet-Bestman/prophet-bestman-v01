@@ -1,43 +1,31 @@
 import React from "react";
-import { motion } from "framer-motion";
-import Progress from "./Progress";
 
 const JobExperience = () => {
   return (
-    <div className="bg-primary grid lg:grid-cols-2 px-8 md:px-12 lg:px-20 items-center py-16 gap-6 overflow-hidden">
-      <div className="col-span-1">
-        <motion.div
-          whileInView={{
-            scale: [0, 1],
-            opacity: [0, 1],
-          }}
-          transition={{
-            delay: 0.3,
-            duration: 0.7,
-            type: "spring",
-            damping: 5.5,
-            stiffness: 25,
-          }}
-        >
-          <img src="/img/Product.svg" />
-        </motion.div>
+    <div className="py-16 bg-primary ">
+      <div className="mb-8 text-3xl font-bold text-center text-white ">
+        Skills
       </div>
-
-      <motion.div className="col-span-1">
-        <h3 className="font-extrabold">JOb Experience Level</h3>
-
-        <div className="grid gap-3 my-8">
-          <Progress percentage={96} name="HTML" />
-          <Progress percentage={87} name="CSS" />
-          <Progress percentage={83} name="SASS" />
-          <Progress percentage={85} name="JavaScript" />
-          <Progress percentage={81} name="TypeScript" />
-          <Progress percentage={85} name="ReactJS" />
-          <Progress percentage={84} name="NextJS" />
-        </div>
-      </motion.div>
+      <div className="flex flex-wrap items-center justify-center gap-12 px-8 overflow-hidden md:gap-20 md:px-12 lg:px-32">
+        {logos.map((logo) => (
+          <img key={logo} src={logo} className="w-28" />
+        ))}
+      </div>
     </div>
   );
 };
 
 export default JobExperience;
+
+const logos = [
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+];
