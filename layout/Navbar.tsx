@@ -23,7 +23,7 @@ const links = [
   },
   {
     name: "Resume",
-    link: "https://docs.google.com/document/d/1hbek64UpF5PFlzVfoG0HNFi7RhchxYLdk-GHRtUdpco/edit?usp=sharing",
+    link: "https://docs.google.com/document/d/1F1yPNQDtz-7PhoPsFUeujvywXTmoy2fw9T4BYJEVmac/edit?usp=sharing",
     newTab: true,
   },
 ];
@@ -92,10 +92,10 @@ const Navbar = () => {
         initial={{ x: 50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
-        className="block md:hidden ml-auto"
+        className="block ml-auto md:hidden"
       >
         <AiOutlineMenu
-          className="text-offWhite text-2xl"
+          className="text-2xl text-offWhite"
           onClick={toggleDrawer}
         />
       </motion.div>
@@ -107,15 +107,15 @@ const Navbar = () => {
         className="w-full max-w-xs bg-primary "
         size={"500"}
       >
-        <div className="bg-primary h-full w-full  px-6">
-          <div className="flex justify-end text-offWhite pt-6">
+        <div className="w-full h-full px-6 bg-primary">
+          <div className="flex justify-end pt-6 text-offWhite">
             <AiOutlineClose
               className="text-2xl cursor-pointer"
               onClick={toggleDrawer}
             />
           </div>
           {/* {isOpen && ( */}
-          <motion.ul className="py-20 grid justify-end gap-6 relative z-30">
+          <motion.ul className="relative z-30 grid justify-end gap-6 py-20">
             {isOpen &&
               links.map((link) => (
                 <motion.li

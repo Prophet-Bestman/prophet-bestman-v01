@@ -1,12 +1,10 @@
-import { gql, request } from "graphql-request";
+import { gql } from "graphql-request";
 import { useQuery } from "react-query";
 import { client } from "./config";
 import {
   GetAllProjects,
   GetSingleProject,
-  Project,
   ProjectData,
-  ProjectResponse,
   SingleProjectData,
 } from "@/types/projectTypes";
 
